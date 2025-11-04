@@ -169,7 +169,7 @@ Comprehensive 4-panel visualization created with **Matplotlib**:
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Python 3.13.5**
 - **Libraries**:
