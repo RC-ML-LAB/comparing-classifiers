@@ -68,9 +68,9 @@ After hyperparameter tuning and class weighting optimization:
 
 | Model | Test Accuracy | Recall (Yes) | F1-Score | Improvement |
 |-------|---------------|--------------|----------|-------------|
-| **Logistic Regression** | 58.47% | **62.18%** | 0.2522 | ⬆️ 62.18% recall gain |
-| **K-Nearest Neighbors** | 86.26% | 9.05% | 0.1292 | ⬆️ 1.51% recall gain |
-| **Decision Tree** | 87.05% | 17.56% | 0.2340 | ⬆️ 9.05% recall gain |
+| **Logistic Regression** | 58.47% | **62.18%** | 0.2522 | ⬆62.18% recall gain |
+| **K-Nearest Neighbors** | 86.26% | 9.05% | 0.1292 | ⬆1.51% recall gain |
+| **Decision Tree** | 87.05% | 17.56% | 0.2340 | ⬆9.05% recall gain |
 
 **Key Success Factor**: Used **F1-score** (not accuracy) as the optimization metric in GridSearchCV, forcing models to balance precision and recall.
 
@@ -125,15 +125,9 @@ Three out of four models showed excellent generalization with minimal overfittin
 - Monitor both accuracy AND recall in production
 - Use probability thresholds to adjust precision/recall trade-off
 
-### 3. **ROI Justification**
-- **Cost of wasted call**: $5-10
-- **Value of new subscriber**: $100-500
-- **With 62% recall and reasonable precision**: Positive ROI even with false positives
-- **Catching 577 subscribers** vs. 0 with high-accuracy model
-
-### 4. **Further Improvements**
+### 3. **Further Improvements**
 - Include all 20 features (currently using only 7 bank features)
-- Try ensemble methods (Random Forest, XGBoost, Gradient Boosting)
+- Try other methods (Random Forest, Gradient Boosting)
 - Collect more positive examples for better model training
 - Experiment with probability threshold tuning
 
@@ -166,7 +160,7 @@ Comprehensive 4-panel visualization created with **Matplotlib**:
   - `LogisticRegression`
   - `KNeighborsClassifier`
   - `DecisionTreeClassifier`
-  - `SVC` (Support Vector Classifier)
+  - `SVC`
   
 - **Techniques**:
   - `train_test_split` with stratification
