@@ -68,9 +68,9 @@ After hyperparameter tuning and class weighting optimization:
 
 | Model | Test Accuracy | Recall (Yes) | F1-Score | Improvement |
 |-------|---------------|--------------|----------|-------------|
-| **Logistic Regression** | 58.47% | **62.18%** | 0.2522 | ⬆62.18% recall gain |
-| **K-Nearest Neighbors** | 86.26% | 9.05% | 0.1292 | ⬆1.51% recall gain |
-| **Decision Tree** | 87.05% | 17.56% | 0.2340 | ⬆9.05% recall gain |
+| **Logistic Regression** | 58.47% | **62.18%** | 0.2522 | 62.18% recall gain |
+| **K-Nearest Neighbors** | 86.26% | 9.05% | 0.1292 | 1.51% recall gain |
+| **Decision Tree** | 87.05% | 17.56% | 0.2340 | 9.05% recall gain |
 
 **Key Success Factor**: Used **F1-score** (not accuracy) as the optimization metric in GridSearchCV, forcing models to balance precision and recall.
 
