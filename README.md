@@ -55,10 +55,10 @@ The notebook contains:
 
 | Model | Test Accuracy | Train Time | Recall (Yes) |
 |-------|---------------|------------|--------------|
-| **Logistic Regression** | 88.74% | 0.38s | 0.00% |
-| **K-Nearest Neighbors** | 87.75% | 0.005s | 7.54% |
+| **Logistic Regression** | 88.74% | 0.29s | 0.00% |
+| **K-Nearest Neighbors** | 87.75% | 0.006s | 7.54% |
 | **Decision Tree** | 86.33% | 0.06s | 8.51% |
-| **Support Vector Machine** | 88.74% | 5.24s | 0.00% |
+| **Support Vector Machine** | 88.74% | 5.35s | 0.00% |
 
 **Key Insight**: All models showed poor minority class detection, defeating the business purpose of identifying potential subscribers.
 
