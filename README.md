@@ -25,7 +25,10 @@ comparing-classifiers
 │
 ├── images/                            # Visualizations directory
 │   ├── data_exploration.png           
-│   └── model_comparison.png           
+│   ├── data_quality_features.png
+│   ├── default_models_problem.png
+│   ├── model_comparison.png
+│   └── before_after_comparison.png           
 │
 ├── data/                              # Dataset directory
 │   ├── bank-additional-full.csv       
@@ -55,10 +58,10 @@ The notebook contains:
 
 | Model | Test Accuracy | Train Time | Recall (Yes) |
 |-------|---------------|------------|--------------|
-| **Logistic Regression** | 88.74% | 0.29s | 0.00% |
-| **K-Nearest Neighbors** | 87.75% | 0.006s | 7.54% |
+| **Logistic Regression** | 88.74% | 0.32s | 0.00% |
+| **K-Nearest Neighbors** | 87.75% | 0.002s | 7.54% |
 | **Decision Tree** | 86.33% | 0.06s | 8.51% |
-| **Support Vector Machine** | 88.74% | 5.35s | 0.00% |
+| **Support Vector Machine** | 88.74% | 5.12s | 0.00% |
 
 **Key Insight**: All models showed poor minority class detection, defeating the business purpose of identifying potential subscribers.
 
@@ -133,19 +136,40 @@ Three out of four models showed excellent generalization with minimal overfittin
 
 ### Visualizations
 
-This includes two sets of visualizations saved in the `images/` folder:
+This project includes **5 comprehensive visualizations** saved in the `images/` folder:
 
-#### Data Exploration (`images/data_exploration.png`)
+#### 1. Data Exploration (`images/data_exploration.png`)
 - **Class Distribution**: Bar chart showing severe class imbalance (88.7% vs 11.3%)
 - **Age Distribution**: Violin plot comparing age patterns between classes
-- Created with **Seaborn** for professional statistical visualization
 
-#### Model Comparison (`images/model_comparison.png`)
-Comprehensive 4-panel visualization created with **Matplotlib**:
-1. **Test Accuracy Comparison**: All 4 models vs. baseline
-2. **Training Time Comparison**: Efficiency analysis
-3. **Overfitting Analysis**: Generalization assessment (color-coded)
-4. **Tuned Models Metrics**: Multi-metric comparison after optimization
+#### 2. Data Quality & Features (`images/data_quality_features.png`)
+**8-panel feature analysis for Problem 3:**
+- Unknown values by feature (color-coded by severity: 'default' has 20.9% missing)
+- Previous contact history (96.4% never contacted before)
+- Job type conversion rates (students/retired convert best)
+- Education level impact on subscription
+- Marital status and contact method effectiveness
+
+#### 3. Default Models Problem (`images/default_models_problem.png`)
+**4-panel visualization showing WHY default models fail (Problem 10):**
+- Confusion matrices showing massive False Negatives
+- Subscribers caught: Most models catch <10% (0-79 out of 928)
+- Prediction distribution: Extreme bias toward "No"
+- Demonstrates the class imbalance problem in action
+
+#### 4. Model Comparison (`images/model_comparison.png`)
+**4-panel model performance analysis:**
+- Test accuracy comparison (all 4 models vs. baseline)
+- Training time comparison (efficiency analysis)
+- Overfitting analysis (color-coded by severity)
+- Tuned models multi-metric comparison
+
+#### 5. Before vs After Comparison (`images/before_after_comparison.png`)
+**6-panel confusion matrix comparison (Problem 11):**
+- Top row: Default models showing the problem
+- Bottom row: Tuned models showing the solution
+- All 3 models compared side-by-side
+- **Key result**: Best model improved from 0 → 577 subscribers caught (0% → 62.2% recall)
 
 ### Technologies Used
 
@@ -155,6 +179,7 @@ Comprehensive 4-panel visualization created with **Matplotlib**:
   - `numpy` - Numerical operations
   - `scikit-learn` - Machine learning algorithms
   - `matplotlib` - Visualizations
+  - `seaborn` - Statistical visualizations
   
 - **Models**:
   - `LogisticRegression`
