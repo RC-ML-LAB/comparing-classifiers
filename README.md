@@ -4,7 +4,7 @@
 
 This project compares the performance of four classification algorithms—**K-Nearest Neighbors (KNN)**, **Logistic Regression**, **Decision Trees**, and **Support Vector Machines (SVM)**—on a bank marketing dataset to predict term deposit subscriptions.
 
-**Date Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
+**Data Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
 
 ## Objective
 
