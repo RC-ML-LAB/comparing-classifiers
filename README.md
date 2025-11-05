@@ -6,8 +6,6 @@ This project compares the performance of four classification algorithms—**K-Ne
 
 **Date Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
 
----
-
 ## Objective
 
 Develop a predictive classification model to identify which bank clients are most likely to subscribe to a term deposit during telemarketing campaigns, enabling the bank to:
@@ -15,8 +13,6 @@ Develop a predictive classification model to identify which bank clients are mos
 - Increase campaign success rates
 - Reduce operational costs
 - Improve customer experience
-
----
 
 ## Project Structure
 
@@ -38,8 +34,6 @@ comparing-classifiers
 └── CRISP-DM-BANK.pdf                 
 ```
 
----
-
 ## Main Deliverable
 
 **[Jupyter Notebook: prompt_III.ipynb](./prompt_III.ipynb)**
@@ -49,8 +43,6 @@ The notebook contains:
 - Comparison of 4 classification algorithms
 - Hyperparameter tuning and model improvement
 - Visualizations and business recommendations
-
----
 
 ## Key Findings
 
@@ -86,10 +78,10 @@ After hyperparameter tuning and class weighting optimization:
 
 | Model | Overfitting Gap | Status |
 |-------|-----------------|--------|
-| Logistic Regression | ~0.00% | ✅ Excellent |
-| K-Nearest Neighbors | 1.38% | ✅ Excellent |
-| Decision Tree | 5.37% | ⚠️ Moderate |
-| Support Vector Machine | ~0.00% | ✅ Excellent |
+| Logistic Regression | ~0.00% | Excellent |
+| K-Nearest Neighbors | 1.38% | Excellent |
+| Decision Tree | 5.37% | Moderate |
+| Support Vector Machine | ~0.00% | Excellent |
 
 Three out of four models showed excellent generalization with minimal overfitting.
 
@@ -102,8 +94,6 @@ Three out of four models showed excellent generalization with minimal overfittin
 - **After**: 58.47% accuracy, 62.18% recall (catches 577 out of 928 subscribers!)
 
 **Business Value**: Identifying 62% of potential subscribers is infinitely more valuable than identifying 0% with "high accuracy."
-
----
 
 ## Methodology
 
@@ -123,8 +113,6 @@ Three out of four models showed excellent generalization with minimal overfittin
 - **Logistic Regression**: C, penalty, solver, class_weight
 - **K-Nearest Neighbors**: n_neighbors, weights, metric
 - **Decision Tree**: max_depth, min_samples_split, min_samples_leaf, criterion, class_weight
-
----
 
 ## Recommendations
 
@@ -149,11 +137,9 @@ Three out of four models showed excellent generalization with minimal overfittin
 - Collect more positive examples for better model training
 - Experiment with probability threshold tuning
 
----
-
 ## Visualizations
 
-The project includes two sets of visualizations saved in the `images/` folder:
+This includes two sets of visualizations saved in the `images/` folder:
 
 ### 1. Data Exploration (`images/data_exploration.png`)
 - **Class Distribution**: Bar chart showing severe class imbalance (88.7% vs 11.3%)
@@ -166,8 +152,6 @@ Comprehensive 4-panel visualization created with **Matplotlib**:
 2. **Training Time Comparison**: Efficiency analysis
 3. **Overfitting Analysis**: Generalization assessment (color-coded)
 4. **Tuned Models Metrics**: Multi-metric comparison after optimization
-
----
 
 ## Technologies Used
 
@@ -189,5 +173,3 @@ Comprehensive 4-panel visualization created with **Matplotlib**:
   - `GridSearchCV` for hyperparameter tuning
   - `LabelEncoder` and `get_dummies` for encoding
   - `DummyClassifier` for baseline
-
----
